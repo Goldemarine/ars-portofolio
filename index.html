@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Aria</title>
+  <title>Selamat Datang | Portofolio Aria</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -14,137 +14,78 @@
     }
 
     body {
-      background: linear-gradient(135deg, #0a192f, #112240);
-      color: #e6f1ff;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-
-    header {
+      background: #0a0f1a;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       text-align: center;
-      padding: 60px 20px 40px;
+      overflow: hidden;
     }
 
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      border: 3px solid #64ffda;
-      object-fit: cover;
+    h1 {
+      font-size: 3rem;
+      color: #0057ff;
+      letter-spacing: 1px;
+      animation: fadeInDown 1.5s ease-in-out;
     }
 
-    header h1 {
-      font-size: 2rem;
-      color: #64ffda;
-    }
-
-    header p {
-      color: #8892b0;
-      font-size: 1rem;
-      margin-top: 5px;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    section h2 {
-      color: #64ffda;
-      margin-bottom: 20px;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-    }
-
-    .btn-container {
-      margin-top: 25px;
+    p {
+      margin-top: 10px;
+      font-size: 1.3rem;
+      color: #a0a0a0;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .btn {
-      display: inline-block;
-      background: #64ffda;
-      color: #0a192f;
-      padding: 10px 20px;
-      border-radius: 8px;
+      margin-top: 40px;
+      padding: 14px 32px;
+      background: #0057ff;
+      color: #fff;
       text-decoration: none;
+      border-radius: 30px;
       font-weight: 600;
-      margin: 8px;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
       transition: all 0.3s ease;
+      animation: fadeInUp 2s ease-in-out;
     }
 
     .btn:hover {
-      background: #52d1b1;
+      background: #1a6bff;
       transform: scale(1.05);
     }
 
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      color: #8892b0;
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    footer a {
-      color: #64ffda;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 1.4rem;
-      transition: color 0.3s;
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    footer a:hover {
-      color: #52d1b1;
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
-    /* Responsif untuk HP */
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.6rem;
+      h1 {
+        font-size: 2.2rem;
       }
-      section {
-        padding: 30px 15px;
+      p {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <!-- GANTI FOTO PROFILMU DI SINI -->
-    <img src="foto-profil.jpg" alt="Foto Profil Aria">
-    <h1>Aria</h1>
-    <p>Tenaga Ahli Ilmu Komunikasi | Profesional Digital</p>
-  </header>
-
-  <section>
-    <h2>Tentang Saya</h2>
-    <p>
-      Saya seorang profesional di bidang komunikasi yang memiliki pengalaman dalam strategi media, publikasi digital, dan pengelolaan konten kreatif. Saya berfokus pada pengembangan pesan yang efektif untuk memperkuat citra organisasi dan meningkatkan keterlibatan audiens.
-    </p>
-
-    <h2>Portofolio</h2>
-    <p>
-      Beberapa proyek yang pernah saya kerjakan mencakup produksi konten video promosi, strategi komunikasi publik sektor pemerintahan, serta analisis audiens digital. 
-      <br><br>
-      Klik tautan di bawah untuk melihat lebih lanjut.
-    </p>
-
-    <div class="btn-container">
-      <!-- GANTI LINK SESUAI PUNYAMU -->
-      <a href="https://www.linkedin.com/in/username" target="_blank" class="btn">LinkedIn</a>
-      <a href="https://portfolio-link.com" target="_blank" class="btn">Portofolio</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>Terhubung dengan saya:</p>
-    <!-- GANTI LINK DAN LOGO JIKA INGIN -->
-    <a href="https://www.instagram.com/username" target="_blank">📸</a>
-    <a href="mailto:emailkamu@example.com">✉️</a>
-    <a href="#top">⬆️</a>
-    <p style="margin-top:10px; font-size:0.9rem;">© 2025 Aria. All rights reserved.</p>
-  </footer>
-
+  <h1>Aria</h1>
+  <p>Portofolio</p>
+  <a href="portfolio.html" class="btn">View More</a>
 </body>
 </html>
