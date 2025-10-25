@@ -25,6 +25,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       transition: background 0.4s ease, color 0.4s ease;
+      line-height: 1.8;
     }
 
     header {
@@ -77,6 +78,10 @@
       box-shadow: 0 0 30px rgba(0,0,0,0.2);
     }
 
+    section {
+      margin-bottom: 2.5rem;
+    }
+
     h2 {
       color: var(--accent-color);
       border-bottom: 2px solid var(--accent-color);
@@ -87,18 +92,26 @@
 
     p {
       text-align: justify;
-      line-height: 1.7;
+      line-height: 1.9;
       font-size: 0.95rem;
+      margin-bottom: 1.5rem;
     }
 
     ul {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       text-align: justify;
+      line-height: 1.8;
+    }
+
+    strong {
+      display: inline-block;
+      margin-bottom: 0.3rem;
     }
 
     .btn {
@@ -119,12 +132,12 @@
     }
 
     .social-icons {
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       text-align: center;
     }
 
     .social-icons a {
-      margin: 0 10px;
+      margin: 0 15px;
       font-size: 1.6rem;
       color: var(--accent-color);
       text-decoration: none;
@@ -167,15 +180,21 @@
     <section id="experience">
       <h2 id="expTitle">Work Experience</h2>
       <ul id="expList">
-        <li><strong>Communication Analyst – Regional Government Project</strong> (2024–Present)<br>Develops communication frameworks, manages public relations, and ensures transparent dissemination of official information.</li>
-        <li><strong>Research Assistant – Academic Collaboration</strong> (2022–2023)<br>Contributed to multiple studies on media literacy, civic engagement, and digital transformation initiatives.</li>
+        <li><strong>Communication Analyst – Regional Government Project</strong> (2024–Present)<br>
+          Develops communication frameworks, manages public relations, and ensures transparent dissemination of official information.
+        </li>
+        <li><strong>Research Assistant – Academic Collaboration</strong> (2022–2023)<br>
+          Contributed to multiple studies on media literacy, civic engagement, and digital transformation initiatives.
+        </li>
       </ul>
     </section>
 
     <section id="education">
       <h2 id="eduTitle">Education</h2>
       <ul id="eduList">
-        <li><strong>Bachelor of Communication Science</strong> – Universitas Negeri Yogyakarta (2019–2023)<br>Focused on public communication, journalism, and digital media management.</li>
+        <li><strong>Bachelor of Communication Science</strong> – Universitas Negeri Yogyakarta (2019–2023)<br>
+          Focused on public communication, journalism, and digital media management.
+        </li>
       </ul>
     </section>
 
@@ -207,7 +226,6 @@
           <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm9.75 1.25a.75.75 0 1 1 0 1.5h-.01a.75.75 0 1 1 0-1.5h.01zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
         </svg>
       </a>
-    
       <a href="https://linkedin.com" target="_blank" title="LinkedIn" aria-label="LinkedIn">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="var(--accent-color)" viewBox="0 0 24 24">
           <path d="M4.98 3A2 2 0 0 0 3 5a2 2 0 0 0 2 2c1.09 0 1.98-.89 1.98-2S6.07 3 4.98 3zM3.5 8h3v13h-3V8zm7 0h2.87v1.78h.04c.4-.75 1.38-1.55 2.84-1.55 3.04 0 3.6 2 3.6 4.59V21h-3v-6.26c0-1.5-.03-3.43-2.09-3.43-2.09 0-2.41 1.63-2.41 3.31V21h-3V8z"/>
