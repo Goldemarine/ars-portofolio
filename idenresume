@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aria — Portfolio</title>
+<style>
+  :root {
+    --primary: #0057ff;
+    --bg-dark: #0b0d17;
+    --bg-light: #f5f6fa;
+    --text-dark: #e0e0e0;
+    --text-light: #222;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #0b0d17, #1a1f2b);
+    color: var(--text-dark);
+  }
+
+  body.light-mode {
+    background: linear-gradient(135deg, #f5f6fa, #dce4ff);
+    color: var(--text-light);
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+  }
+
+  .switch-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .switch-btn {
+    background: none;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+
+  .switch-btn:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px 80px 20px;
+  }
+
+  h1 {
+    text-align: center;
+    color: var(--primary);
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    color: var(--primary);
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    text-align: justify;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 80px;
+    color: var(--primary);
+    font-size: 0.9rem;
+  }
+
+  .signature {
+    text-align: right;
+    margin-top: 50px;
+  }
+
+  .signature img {
+    height: 80px;
+    opacity: 0.8;
+  }
+
+  .button-group {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .button-group a {
+    text-decoration: none;
+    color: #fff;
+    background: var(--primary);
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: 0.3s;
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .button-group a:hover {
+    background: #003ed6;
+  }
+
+  .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: 0.3s;
+  }
+
+  body.light-mode .social-icons a {
+    color: #0057ff;
+  }
+
+  .social-icons a:hover {
+    opacity: 0.7;
+  }
+
+</style>
+<script src="https://kit.fontawesome.com/a2e0bf0b5e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+  <h2>Aria</h2>
+  <div class="switch-container">
+    <button id="langToggle" class="switch-btn">ID</button>
+    <button id="modeToggle" class="switch-btn">Light</button>
+  </div>
+</header>
+
+<div class="container">
+  <h1 id="title">My Professional Portfolio</h1>
+
+  <h2 id="aboutTitle">About Me</h2>
+  <p id="aboutDesc">
+    I am a communication and strategy professional with a deep passion for creating structured and compelling narratives. 
+    With years of experience in public sector communication and creative consultancy, I specialize in bridging analytical precision 
+    with innovative storytelling that inspires both understanding and trust.
+  </p>
+
+  <h2 id="workTitle">Work Experience</h2>
+  <p id="workDesc">
+    • Communication Specialist at Regional Land and Spatial Planning Office (2020–Present) — Leading public communication initiatives, content strategy, and digital engagement.<br>
+    • Freelance Creative Consultant (2017–2020) — Developed strategic communication materials for private clients and media organizations.<br>
+    • Research Assistant at Faculty of Communication — Conducted academic and policy-based media research.
+  </p>
+
+  <h2 id="eduTitle">Education</h2>
+  <p id="eduDesc">
+    • Bachelor’s Degree in Communication Science, Universitas Gadjah Mada (2016–2020).<br>
+    • Certification in Digital Branding and Public Relations (Google x Coursera).<br>
+    • Continuous professional training in digital communication strategy and writing.
+  </p>
+
+  <h2 id="achieveTitle">Achievements & Certifications</h2>
+  <p id="achieveDesc">
+    • Awardee of Regional Government Innovation Program (2023).<br>
+    • Best Public Communication Strategy, DIY Province (2022).<br>
+    • Certified Professional Communicator by Kominfo Indonesia (2021).
+  </p>
+
+  <h2 id="closingTitle">Closing Note</h2>
+  <p id="closingDesc">
+    Every story deserves to be told with clarity, empathy, and purpose. I believe effective communication is not about speaking louder, 
+    but about connecting deeper — turning data into understanding and vision into reality.
+  </p>
+
+  <div class="signature">
+    <img src="signature.png" alt="Signature">
+  </div>
+
+  <div class="button-group">
+    <a href="index.html" id="backBtn">Back to Home</a>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+
+  <div class="footer">© 2025 Aria — All Rights Reserved</div>
+</div>
+
+<script>
+  const modeToggle = document.getElementById("modeToggle");
+  const langToggle = document.getElementById("langToggle");
+  const body = document.body;
+
+  const en = {
+    title: "My Professional Portfolio",
+    aboutTitle: "About Me",
+    aboutDesc: "I am a communication and strategy professional with a deep passion for creating structured and compelling narratives. With years of experience in public sector communication and creative consultancy, I specialize in bridging analytical precision with innovative storytelling that inspires both understanding and trust.",
+    workTitle: "Work Experience",
+    workDesc: "• Communication Specialist at Regional Land and Spatial Planning Office (2020–Present) — Leading public communication initiatives, content strategy, and digital engagement.\n• Freelance Creative Consultant (2017–2020) — Developed strategic communication materials for private clients and media organizations.\n• Research Assistant at Faculty of Communication — Conducted academic and policy-based media research.",
+    eduTitle: "Education",
+    eduDesc: "• Bachelor’s Degree in Communication Science, Universitas Gadjah Mada (2016–2020).\n• Certification in Digital Branding and Public Relations (Google x Coursera).\n• Continuous professional training in digital communication strategy and writing.",
+    achieveTitle: "Achievements & Certifications",
+    achieveDesc: "• Awardee of Regional Government Innovation Program (2023).\n• Best Public Communication Strategy, DIY Province (2022).\n• Certified Professional Communicator by Kominfo Indonesia (2021).",
+    closingTitle: "Closing Note",
+    closingDesc: "Every story deserves to be told with clarity, empathy, and purpose. I believe effective communication is not about speaking louder, but about connecting deeper — turning data into understanding and vision into reality.",
+    backBtn: "Back to Home"
+  };
+
+  const id = {
+    title: "Portofolio Profesional Saya",
+    aboutTitle: "Tentang Saya",
+    aboutDesc: "Saya adalah seorang profesional komunikasi dan strategi yang berfokus pada pengembangan narasi yang terstruktur dan berpengaruh. Dengan pengalaman bertahun-tahun di sektor publik dan konsultasi kreatif, saya menggabungkan ketepatan analitis dengan intuisi kreatif untuk menciptakan komunikasi yang efektif dan membangun kepercayaan.",
+    workTitle: "Pengalaman Kerja",
+    workDesc: "• Spesialis Komunikasi di Dinas Pertanahan dan Tata Ruang DIY (2020–Sekarang) — Memimpin strategi komunikasi publik, konten digital, dan engagement media.\n• Konsultan Kreatif Lepas (2017–2020) — Mengembangkan materi komunikasi strategis untuk klien swasta dan organisasi media.\n• Asisten Peneliti di Fakultas Ilmu Komunikasi — Melakukan penelitian akademik dan kebijakan media.",
+    eduTitle: "Pendidikan",
+    eduDesc: "• Sarjana Ilmu Komunikasi, Universitas Gadjah Mada (2016–2020).\n• Sertifikasi Digital Branding dan Public Relations (Google x Coursera).\n• Pelatihan profesional berkelanjutan dalam strategi komunikasi digital dan penulisan.",
+    achieveTitle: "Pencapaian & Sertifikasi",
+    achieveDesc: "• Penerima Program Inovasi Pemerintah Daerah (2023).\n• Strategi Komunikasi Publik Terbaik, Provinsi DIY (2022).\n• Sertifikasi Komunikator Profesional oleh Kominfo Indonesia (2021).",
+    closingTitle: "Catatan Penutup",
+    closingDesc: "Setiap cerita layak disampaikan dengan kejelasan, empati, dan tujuan. Saya percaya komunikasi yang efektif bukan tentang berbicara lebih keras, melainkan tentang terhubung lebih dalam — mengubah data menjadi pemahaman dan visi menjadi kenyataan.",
+    backBtn: "Kembali ke Beranda"
+  };
+
+  modeToggle.addEventListener("click", () => {
+    body.classList.toggle("light-mode");
+    modeToggle.textContent = body.classList.contains("light-mode") ? "Dark" : "Light";
+  });
+
+  langToggle.addEventListener("click", () => {
+    const lang = langToggle.textContent === "ID" ? "EN" : "ID";
+    langToggle.textContent = lang;
+    const texts = lang === "EN" ? en : id;
+    for (const key in texts) {
+      const el = document.getElementById(key);
+      if (el) el.textContent = texts[key];
+    }
+  });
+</script>
+</body>
+</html>
