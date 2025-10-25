@@ -12,19 +12,18 @@
       color: #f5f5f5;
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
     }
 
     header {
       text-align: center;
-      padding: 80px 20px 40px;
+      padding: 60px 20px 20px;
     }
 
     header h1 {
       color: #0057ff;
       font-size: 2.5em;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
+      margin-bottom: 8px;
+      letter-spacing: 1.5px;
     }
 
     header p {
@@ -36,10 +35,8 @@
 
     section {
       max-width: 900px;
-      margin: 60px auto;
-      padding: 20px;
-      position: relative;
-      z-index: 2;
+      margin: 25px auto;
+      padding: 0 20px;
     }
 
     h2 {
@@ -47,65 +44,50 @@
       border-left: 4px solid #0057ff;
       padding-left: 10px;
       font-weight: 600;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      margin-top: 0;
     }
 
     p, li {
       line-height: 1.6;
       color: #dcdcdc;
       font-weight: 300;
+      margin: 5px 0;
+      text-align: justify;
     }
 
-    .shape-left, .shape-right {
-      position: fixed;
-      width: 180px;
-      height: 180px;
-      background: rgba(0, 87, 255, 0.15);
-      border-radius: 50%;
-      z-index: 1;
-    }
-
-    .shape-left {
-      top: 10%;
-      left: -80px;
-    }
-
-    .shape-right {
-      bottom: 10%;
-      right: -80px;
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin: 5px 0;
     }
 
     footer {
       text-align: center;
-      padding: 40px 0;
+      padding: 30px 0;
       color: #bfbfbf;
       border-top: 1px solid rgba(255,255,255,0.1);
-      position: relative;
-    }
-
-    footer img {
-      width: 120px;
-      opacity: 0.9;
-      margin-top: 15px;
     }
 
     footer a {
       text-decoration: none;
       color: #0057ff;
-      margin: 0 10px;
+      margin: 0 8px;
+    }
+
+    footer img {
+      width: 100px;
+      opacity: 0.85;
+      margin-top: 10px;
     }
 
     @media (max-width: 768px) {
       header h1 { font-size: 2em; }
-      section { padding: 10px 15px; margin: 40px auto; }
-      .shape-left, .shape-right { display: none; }
+      section { padding: 0 15px; }
     }
   </style>
 </head>
 <body>
-
-  <div class="shape-left"></div>
-  <div class="shape-right"></div>
 
   <header>
     <h1>Aria’s Professional Portfolio</h1>
@@ -115,30 +97,28 @@
   <section>
     <h2>About Me</h2>
     <p>
-      I am a communication professional with a strong passion for crafting impactful narratives that connect people, ideas, and change. 
-      With a multidisciplinary background spanning media strategy, content development, and public relations, I thrive on turning complex 
-      concepts into stories that resonate. My approach combines analytical thinking with creativity, helping organizations strengthen 
-      their digital presence and build authentic engagement with diverse audiences.
+      I am a communication professional with a deep interest in transforming ideas into meaningful stories that inspire people and organizations.
+      My experience spans digital communication strategy, public relations, and multimedia storytelling. I aim to bridge analytical precision with creativity,
+      helping institutions communicate with clarity, empathy, and authenticity.
     </p>
   </section>
 
   <section>
     <h2>Work Experience</h2>
     <ul>
-      <li><b>Communication Analyst</b> — Regional Land and Spatial Planning Agency (2023–Present)  
-      Led digital content initiatives, managed stakeholder communications, and developed storytelling materials for public transparency programs.</li>
-      <li><b>Public Relations Assistant</b> — Creative Media Bureau (2021–2023)  
-      Coordinated press releases, digital campaigns, and community outreach strategies for both government and private clients.</li>
-      <li><b>Freelance Content Strategist</b> — Remote (2019–2021)  
-      Designed content blueprints and conducted brand narrative audits for small enterprises and digital creators.</li>
+      <li><b>Communication Analyst</b> — Regional Land and Spatial Planning Agency (2023–Present): Developed and executed communication materials for
+      transparency programs, coordinated stakeholder engagements, and created digital storytelling initiatives.</li>
+      <li><b>Public Relations Assistant</b> — Creative Media Bureau (2021–2023): Supported integrated media campaigns, produced press releases,
+      and built communication frameworks for public sector clients.</li>
+      <li><b>Freelance Content Strategist</b> — Remote (2019–2021): Crafted brand narratives and digital identity concepts for entrepreneurs and creative agencies.</li>
     </ul>
   </section>
 
   <section>
     <h2>Education</h2>
     <ul>
-      <li><b>Bachelor of Communication Studies</b> — State University of Yogyakarta  
-      Specialized in Media and Strategic Communication, focusing on public information dissemination and digital literacy campaigns.</li>
+      <li><b>Bachelor of Communication Studies</b> — State University of Yogyakarta
+      Focused on strategic communication, media relations, and public information dissemination.</li>
     </ul>
   </section>
 
@@ -154,9 +134,9 @@
   <section>
     <h2>Closing Note</h2>
     <p>
-      I believe that effective communication is not only about conveying messages but shaping perspectives and inspiring collaboration. 
-      My ongoing mission is to use storytelling as a catalyst for public trust, innovation, and social progress.  
-      If my profile aligns with your vision, feel free to reach out — I’m always open to new challenges that expand both creativity and purpose.
+      I view communication as both an art and a science — a means to connect thought with action, and purpose with progress.
+      My goal is to continue creating narratives that not only inform, but also inspire.
+      Let’s connect and collaborate to make ideas come alive through the power of storytelling.
     </p>
   </section>
 
@@ -166,7 +146,6 @@
     <a href="https://www.behance.net" target="_blank">Portfolio</a> |
     <a href="https://www.instagram.com" target="_blank">Instagram</a>
     <br>
-    <!-- Tambahkan tanda tanganmu di sini -->
     <img src="signature.png" alt="Signature Placeholder">
     <p>© 2025 Aria. All rights reserved.</p>
   </footer>
