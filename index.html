@@ -1,91 +1,161 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Selamat Datang | Portofolio Aria</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aria | Home</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
+    :root {
+      --bg-gradient: linear-gradient(135deg, #0d1117, #1b263b);
+      --text-color: #e6edf3;
+      --accent-color: #58a6ff;
+      --card-bg: rgba(22, 27, 34, 0.9);
+    }
+
+    body.light {
+      --bg-gradient: linear-gradient(135deg, #f5f7fa, #dce3ec);
+      --text-color: #222;
+      --accent-color: #0366d6;
+      --card-bg: rgba(255,255,255,0.9);
     }
 
     body {
-      background: #0a0f1a;
-      color: white;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-color);
+      transition: background 0.4s ease, color 0.4s ease;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      background: var(--card-bg);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+    }
+
+    header h1 {
+      color: var(--accent-color);
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .switch-mode {
+      cursor: pointer;
+      background: none;
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .switch-mode:hover {
+      background: var(--accent-color);
+      color: var(--bg-gradient);
+    }
+
+    .container {
+      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
       text-align: center;
-      overflow: hidden;
+      padding: 2rem;
     }
 
-    h1 {
-      font-size: 3rem;
-      color: #0057ff;
-      letter-spacing: 1px;
-      animation: fadeInDown 1.5s ease-in-out;
+    h2 {
+      font-size: 2rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
     }
 
     p {
-      margin-top: 10px;
-      font-size: 1.3rem;
-      color: #a0a0a0;
-      animation: fadeIn 2s ease-in-out;
+      max-width: 700px;
+      line-height: 1.7;
+      text-align: justify;
+      font-size: 1rem;
+      margin-bottom: 2rem;
     }
 
     .btn {
-      margin-top: 40px;
-      padding: 14px 32px;
-      background: #0057ff;
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: 25px;
+      background-color: var(--accent-color);
       color: #fff;
       text-decoration: none;
-      border-radius: 30px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      letter-spacing: 0.5px;
-      transition: all 0.3s ease;
-      animation: fadeInUp 2s ease-in-out;
+      font-weight: bold;
+      transition: 0.3s ease;
     }
 
     .btn:hover {
-      background: #1a6bff;
+      opacity: 0.85;
       transform: scale(1.05);
     }
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-40px); }
-      to { opacity: 1; transform: translateY(0); }
+    .social-icons {
+      margin-top: 1.5rem;
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 1.6rem;
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: 0.3s;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    .social-icons a:hover {
+      color: #fff;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.2rem;
-      }
-      p {
-        font-size: 1rem;
-      }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      padding: 1rem;
     }
   </style>
+  <script src="https://kit.fontawesome.com/8f0c72b3c7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>Ardian Aryasena</h1>
-  <p>Portofolio</p>
-  <a href="resume.html" class="btn">View More</a>
+  <header>
+    <h1>Aria's Portfolio</h1>
+    <button class="switch-mode" onclick="toggleMode()">☀ Light / Dark 🌙</button>
+  </header>
+
+  <div class="container">
+    <h2>Welcome</h2>
+    <p>
+      Hello, I’m Aria — a passionate communication professional who blends creativity, data-driven strategy, and storytelling to connect people and ideas. Explore my portfolio to see how I craft impactful communication and media strategies.
+    </p>
+
+    <a href="portofolio.html" class="btn">View Portfolio</a>
+
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+
+  <footer>© 2025 Aria | Designed for elegance and clarity</footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light');
+    }
+  </script>
 </body>
 </html>
