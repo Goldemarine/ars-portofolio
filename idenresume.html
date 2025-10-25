@@ -1,252 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aria — Portfolio</title>
-<style>
-  :root {
-    --primary: #0057ff;
-    --bg-dark: #0b0d17;
-    --bg-light: #f5f6fa;
-    --text-dark: #e0e0e0;
-    --text-light: #222;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aria | Portfolio</title>
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #0d1117, #1b263b);
+      --text-color: #e6edf3;
+      --accent-color: #58a6ff;
+      --card-bg: rgba(22, 27, 34, 0.9);
+    }
 
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    transition: all 0.3s ease;
-    background: linear-gradient(135deg, #0b0d17, #1a1f2b);
-    color: var(--text-dark);
-  }
+    body.light {
+      --bg-gradient: linear-gradient(135deg, #f5f7fa, #dce3ec);
+      --text-color: #222;
+      --accent-color: #0366d6;
+      --card-bg: rgba(255,255,255,0.9);
+    }
 
-  body.light-mode {
-    background: linear-gradient(135deg, #f5f6fa, #dce4ff);
-    color: var(--text-light);
-  }
+    body {
+      background: var(--bg-gradient);
+      color: var(--text-color);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-  }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      background: var(--card-bg);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+    }
 
-  .switch-container {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
+    header h1 {
+      color: var(--accent-color);
+      margin: 0;
+      font-size: 1.5rem;
+    }
 
-  .switch-btn {
-    background: none;
-    border: 1px solid var(--primary);
-    color: var(--primary);
-    padding: 5px 10px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s;
-  }
+    .switch-container {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
 
-  .switch-btn:hover {
-    background: var(--primary);
-    color: #fff;
-  }
+    .switch-btn {
+      cursor: pointer;
+      background: none;
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
 
-  .container {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 0 20px 80px 20px;
-  }
+    .switch-btn:hover {
+      background: var(--accent-color);
+      color: var(--bg-gradient);
+    }
 
-  h1 {
-    text-align: center;
-    color: var(--primary);
-    font-size: 2.8rem;
-    margin-bottom: 50px;
-  }
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: var(--card-bg);
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    }
 
-  h2 {
-    color: var(--primary);
-    margin-top: 40px;
-    margin-bottom: 10px;
-  }
+    h2 {
+      color: var(--accent-color);
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
 
-  p {
-    text-align: justify;
-    line-height: 1.6;
-    margin: 0;
-  }
+    p {
+      text-align: justify;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
 
-  .footer {
-    text-align: center;
-    margin-top: 80px;
-    color: var(--primary);
-    font-size: 0.9rem;
-  }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
 
-  .signature {
-    text-align: right;
-    margin-top: 50px;
-  }
+    li {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
 
-  .signature img {
-    height: 80px;
-    opacity: 0.8;
-  }
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: 25px;
+      background-color: var(--accent-color);
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
 
-  .button-group {
-    text-align: center;
-    margin-top: 40px;
-  }
+    .btn:hover {
+      opacity: 0.85;
+      transform: scale(1.05);
+    }
 
-  .button-group a {
-    text-decoration: none;
-    color: #fff;
-    background: var(--primary);
-    padding: 12px 30px;
-    border-radius: 30px;
-    transition: 0.3s;
-    display: inline-block;
-    margin: 10px;
-  }
+    .social-icons {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
 
-  .button-group a:hover {
-    background: #003ed6;
-  }
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 1.6rem;
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: 0.3s;
+    }
 
-  .social-icons a {
-    color: #fff;
-    font-size: 1.5rem;
-    margin: 0 15px;
-    transition: 0.3s;
-  }
+    .social-icons a:hover {
+      color: #fff;
+    }
 
-  body.light-mode .social-icons a {
-    color: #0057ff;
-  }
-
-  .social-icons a:hover {
-    opacity: 0.7;
-  }
-
-</style>
-<script src="https://kit.fontawesome.com/a2e0bf0b5e.js" crossorigin="anonymous"></script>
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      margin-top: 3rem;
+      padding: 1rem;
+      color: var(--text-color);
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/8f0c72b3c7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-<header>
-  <h2>Aria</h2>
-  <div class="switch-container">
-    <button id="langToggle" class="switch-btn">ID</button>
-    <button id="modeToggle" class="switch-btn">Light</button>
-  </div>
-</header>
-
-<div class="container">
-  <h1 id="title">My Professional Portfolio</h1>
-
-  <h2 id="aboutTitle">About Me</h2>
-  <p id="aboutDesc">
-    I am a communication and strategy professional with a deep passion for creating structured and compelling narratives. 
-    With years of experience in public sector communication and creative consultancy, I specialize in bridging analytical precision 
-    with innovative storytelling that inspires both understanding and trust.
-  </p>
-
-  <h2 id="workTitle">Work Experience</h2>
-  <p id="workDesc">
-    • Communication Specialist at Regional Land and Spatial Planning Office (2020–Present) — Leading public communication initiatives, content strategy, and digital engagement.<br>
-    • Freelance Creative Consultant (2017–2020) — Developed strategic communication materials for private clients and media organizations.<br>
-    • Research Assistant at Faculty of Communication — Conducted academic and policy-based media research.
-  </p>
-
-  <h2 id="eduTitle">Education</h2>
-  <p id="eduDesc">
-    • Bachelor’s Degree in Communication Science, Universitas Gadjah Mada (2016–2020).<br>
-    • Certification in Digital Branding and Public Relations (Google x Coursera).<br>
-    • Continuous professional training in digital communication strategy and writing.
-  </p>
-
-  <h2 id="achieveTitle">Achievements & Certifications</h2>
-  <p id="achieveDesc">
-    • Awardee of Regional Government Innovation Program (2023).<br>
-    • Best Public Communication Strategy, DIY Province (2022).<br>
-    • Certified Professional Communicator by Kominfo Indonesia (2021).
-  </p>
-
-  <h2 id="closingTitle">Closing Note</h2>
-  <p id="closingDesc">
-    Every story deserves to be told with clarity, empathy, and purpose. I believe effective communication is not about speaking louder, 
-    but about connecting deeper — turning data into understanding and vision into reality.
-  </p>
-
-  <div class="signature">
-    <img src="signature.png" alt="Signature">
-  </div>
-
-  <div class="button-group">
-    <a href="index.html" id="backBtn">Back to Home</a>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <header>
+    <h1 id="title">Aria's Portfolio</h1>
+    <div class="switch-container">
+      <button class="switch-btn" id="langToggle">ID</button>
+      <button class="switch-btn" onclick="toggleMode()">☀ Light / Dark 🌙</button>
     </div>
+  </header>
+
+  <div class="container">
+    <section id="about">
+      <h2 id="aboutTitle">About Me</h2>
+      <p id="aboutText">
+        I am an adaptable and creative communication professional who values clarity, precision, and purpose in every message. 
+        With a background in media, public relations, and research, I combine analytical thinking with design sensibility 
+        to craft communication strategies that resonate and create impact.
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2 id="expTitle">Work Experience</h2>
+      <ul id="expList">
+        <li><strong>Communication Analyst – Regional Government Project</strong> (2024–Present)<br>Develops communication frameworks, manages public relations, and ensures transparent dissemination of official information.</li>
+        <li><strong>Research Assistant – Academic Collaboration</strong> (2022–2023)<br>Contributed to multiple studies on media literacy, civic engagement, and digital transformation initiatives.</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2 id="eduTitle">Education</h2>
+      <ul id="eduList">
+        <li><strong>Bachelor of Communication Science</strong> – Universitas Negeri Yogyakarta (2019–2023)<br>Focused on public communication, journalism, and digital media management.</li>
+      </ul>
+    </section>
+
+    <section id="achievements">
+      <h2 id="achTitle">Achievements & Certifications</h2>
+      <ul id="achList">
+        <li>Certified Digital Communication Strategist – Digitalent Scholarship 2024</li>
+        <li>Best Research Presentation – National Communication Conference 2023</li>
+        <li>Content Development & Branding Certification – Google Skillshop 2023</li>
+      </ul>
+    </section>
+
+    <section id="closing">
+      <h2 id="closeTitle">Closing Statement</h2>
+      <p id="closeText">
+        Communication is more than expression—it is a bridge between ideas and understanding. 
+        I aim to create meaningful, research-driven, and visually coherent works that contribute to organizational growth and public trust. 
+        I look forward to collaborating with institutions and professionals who value integrity and innovation.
+      </p>
+    </section>
+
+    <div style="text-align:center;">
+      <a href="https://www.behance.net/guardian-ars" class="btn" id="btnPortfolio">My Portfolio</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank" title="Instagram" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://linkedin.com" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+
+    <footer id="footerText">© 2025 Aria | Built for clarity and elegance</footer>
   </div>
 
-  <div class="footer">© 2025 Aria — All Rights Reserved</div>
-</div>
-
-<script>
-  const modeToggle = document.getElementById("modeToggle");
-  const langToggle = document.getElementById("langToggle");
-  const body = document.body;
-
-  const en = {
-    title: "My Professional Portfolio",
-    aboutTitle: "About Me",
-    aboutDesc: "I am a communication and strategy professional with a deep passion for creating structured and compelling narratives. With years of experience in public sector communication and creative consultancy, I specialize in bridging analytical precision with innovative storytelling that inspires both understanding and trust.",
-    workTitle: "Work Experience",
-    workDesc: "• Communication Specialist at Regional Land and Spatial Planning Office (2020–Present) — Leading public communication initiatives, content strategy, and digital engagement.\n• Freelance Creative Consultant (2017–2020) — Developed strategic communication materials for private clients and media organizations.\n• Research Assistant at Faculty of Communication — Conducted academic and policy-based media research.",
-    eduTitle: "Education",
-    eduDesc: "• Bachelor’s Degree in Communication Science, Universitas Gadjah Mada (2016–2020).\n• Certification in Digital Branding and Public Relations (Google x Coursera).\n• Continuous professional training in digital communication strategy and writing.",
-    achieveTitle: "Achievements & Certifications",
-    achieveDesc: "• Awardee of Regional Government Innovation Program (2023).\n• Best Public Communication Strategy, DIY Province (2022).\n• Certified Professional Communicator by Kominfo Indonesia (2021).",
-    closingTitle: "Closing Note",
-    closingDesc: "Every story deserves to be told with clarity, empathy, and purpose. I believe effective communication is not about speaking louder, but about connecting deeper — turning data into understanding and vision into reality.",
-    backBtn: "Back to Home"
-  };
-
-  const id = {
-    title: "Portofolio Profesional Saya",
-    aboutTitle: "Tentang Saya",
-    aboutDesc: "Saya adalah seorang profesional komunikasi dan strategi yang berfokus pada pengembangan narasi yang terstruktur dan berpengaruh. Dengan pengalaman bertahun-tahun di sektor publik dan konsultasi kreatif, saya menggabungkan ketepatan analitis dengan intuisi kreatif untuk menciptakan komunikasi yang efektif dan membangun kepercayaan.",
-    workTitle: "Pengalaman Kerja",
-    workDesc: "• Spesialis Komunikasi di Dinas Pertanahan dan Tata Ruang DIY (2020–Sekarang) — Memimpin strategi komunikasi publik, konten digital, dan engagement media.\n• Konsultan Kreatif Lepas (2017–2020) — Mengembangkan materi komunikasi strategis untuk klien swasta dan organisasi media.\n• Asisten Peneliti di Fakultas Ilmu Komunikasi — Melakukan penelitian akademik dan kebijakan media.",
-    eduTitle: "Pendidikan",
-    eduDesc: "• Sarjana Ilmu Komunikasi, Universitas Gadjah Mada (2016–2020).\n• Sertifikasi Digital Branding dan Public Relations (Google x Coursera).\n• Pelatihan profesional berkelanjutan dalam strategi komunikasi digital dan penulisan.",
-    achieveTitle: "Pencapaian & Sertifikasi",
-    achieveDesc: "• Penerima Program Inovasi Pemerintah Daerah (2023).\n• Strategi Komunikasi Publik Terbaik, Provinsi DIY (2022).\n• Sertifikasi Komunikator Profesional oleh Kominfo Indonesia (2021).",
-    closingTitle: "Catatan Penutup",
-    closingDesc: "Setiap cerita layak disampaikan dengan kejelasan, empati, dan tujuan. Saya percaya komunikasi yang efektif bukan tentang berbicara lebih keras, melainkan tentang terhubung lebih dalam — mengubah data menjadi pemahaman dan visi menjadi kenyataan.",
-    backBtn: "Kembali ke Beranda"
-  };
-
-  modeToggle.addEventListener("click", () => {
-    body.classList.toggle("light-mode");
-    modeToggle.textContent = body.classList.contains("light-mode") ? "Dark" : "Light";
-  });
-
-  langToggle.addEventListener("click", () => {
-    const lang = langToggle.textContent === "ID" ? "EN" : "ID";
-    langToggle.textContent = lang;
-    const texts = lang === "EN" ? en : id;
-    for (const key in texts) {
-      const el = document.getElementById(key);
-      if (el) el.textContent = texts[key];
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light');
     }
-  });
-</script>
+
+    const langToggle = document.getElementById('langToggle');
+    let isEnglish = true;
+
+    langToggle.addEventListener('click', () => {
+      isEnglish = !isEnglish;
+      langToggle.textContent = isEnglish ? 'ID' : 'EN';
+      setLanguage(isEnglish ? 'en' : 'id');
+    });
+
+    function setLanguage(lang) {
+      const en = {
+        title: "Aria's Portfolio",
+        aboutTitle: "About Me",
+        aboutText: "I am an adaptable and creative communication professional who values clarity, precision, and purpose in every message. With a background in media, public relations, and research, I combine analytical thinking with design sensibility to craft communication strategies that resonate and create impact.",
+        expTitle: "Work Experience",
+        expList: `
+          <li><strong>Communication Analyst – Regional Government Project</strong> (2024–Present)<br>Develops communication frameworks, manages public relations, and ensures transparent dissemination of official information.</li>
+          <li><strong>Research Assistant – Academic Collaboration</strong> (2022–2023)<br>Contributed to multiple studies on media literacy, civic engagement, and digital transformation initiatives.</li>
+        `,
+        eduTitle: "Education",
+        eduList: `
+          <li><strong>Bachelor of Communication Science</strong> – Universitas Negeri Yogyakarta (2019–2023)<br>Focused on public communication, journalism, and digital media management.</li>
+        `,
+        achTitle: "Achievements & Certifications",
+        achList: `
+          <li>Certified Digital Communication Strategist – Digitalent Scholarship 2024</li>
+          <li>Best Research Presentation – National Communication Conference 2023</li>
+          <li>Content Development & Branding Certification – Google Skillshop 2023</li>
+        `,
+        closeTitle: "Closing Statement",
+        closeText: "Communication is more than expression—it is a bridge between ideas and understanding. I aim to create meaningful, research-driven, and visually coherent works that contribute to organizational growth and public trust. I look forward to collaborating with institutions and professionals who value integrity and innovation.",
+        btnPortfolio: "My Portfolio",
+        footerText: "© 2025 Aria | Built for clarity and elegance"
+      };
+
+      const id = {
+        title: "Portofolio Aria",
+        aboutTitle: "Tentang Saya",
+        aboutText: "Saya adalah seorang profesional komunikasi yang adaptif dan kreatif, menekankan kejelasan, ketepatan, dan tujuan dalam setiap pesan. Dengan latar belakang media, hubungan masyarakat, dan penelitian, saya menggabungkan pemikiran analitis dengan kepekaan desain untuk merancang strategi komunikasi yang efektif dan berdampak.",
+        expTitle: "Pengalaman Kerja",
+        expList: `
+          <li><strong>Analis Komunikasi – Proyek Pemerintah Daerah</strong> (2024–Sekarang)<br>Mengembangkan kerangka komunikasi, mengelola hubungan publik, dan memastikan penyebaran informasi resmi yang transparan.</li>
+          <li><strong>Asisten Peneliti – Kolaborasi Akademik</strong> (2022–2023)<br>Berkontribusi dalam berbagai studi mengenai literasi media, partisipasi publik, dan transformasi digital.</li>
+        `,
+        eduTitle: "Pendidikan",
+        eduList: `
+          <li><strong>Sarjana Ilmu Komunikasi</strong> – Universitas Negeri Yogyakarta (2019–2023)<br>Berfokus pada komunikasi publik, jurnalisme, dan manajemen media digital.</li>
+        `,
+        achTitle: "Pencapaian & Sertifikasi",
+        achList: `
+          <li>Sertifikasi Strategi Komunikasi Digital – Digitalent Scholarship 2024</li>
+          <li>Presentasi Riset Terbaik – Konferensi Komunikasi Nasional 2023</li>
+          <li>Sertifikasi Pengembangan Konten & Branding – Google Skillshop 2023</li>
+        `,
+        closeTitle: "Pernyataan Penutup",
+        closeText: "Komunikasi lebih dari sekadar ekspresi—ia adalah jembatan antara ide dan pemahaman. Saya berkomitmen menciptakan karya yang bermakna, berbasis riset, dan secara visual selaras, untuk mendukung pertumbuhan organisasi dan membangun kepercayaan publik. Saya terbuka untuk berkolaborasi dengan lembaga atau profesional yang menjunjung integritas dan inovasi.",
+        btnPortfolio: "Portofolio Saya",
+        footerText: "© 2025 Aria | Dibangun untuk kejelasan dan keanggunan"
+      };
+
+      const t = lang === 'en' ? en : id;
+      document.getElementById('title').textContent = t.title;
+      document.getElementById('aboutTitle').textContent = t.aboutTitle;
+      document.getElementById('aboutText').textContent = t.aboutText;
+      document.getElementById('expTitle').textContent = t.expTitle;
+      document.getElementById('expList').innerHTML = t.expList;
+      document.getElementById('eduTitle').textContent = t.eduTitle;
+      document.getElementById('eduList').innerHTML = t.eduList;
+      document.getElementById('achTitle').textContent = t.achTitle;
+      document.getElementById('achList').innerHTML = t.achList;
+      document.getElementById('closeTitle').textContent = t.closeTitle;
+      document.getElementById('closeText').textContent = t.closeText;
+      document.getElementById('btnPortfolio').textContent = t.btnPortfolio;
+      document.getElementById('footerText').textContent = t.footerText;
+    }
+  </script>
 </body>
 </html>
