@@ -1,25 +1,18 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Aria</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio | Aria</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0c0c14;
+      color: #f5f5f5;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    body {
-      background: #0a0f1a;
-      color: #e6f1ff;
-      line-height: 1.6;
-      scroll-behavior: smooth;
       overflow-x: hidden;
-      position: relative;
     }
 
     header {
@@ -27,192 +20,156 @@
       padding: 80px 20px 40px;
     }
 
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      border: 3px solid #0057ff;
-      object-fit: cover;
-    }
-
     header h1 {
-      font-size: 2rem;
       color: #0057ff;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
     }
 
     header p {
-      color: #a0a0a0;
-      font-size: 1rem;
-      margin-top: 5px;
+      font-weight: 300;
+      color: #bfbfbf;
+      font-size: 1.1em;
+      margin: 0;
     }
 
     section {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
     }
 
-    section h2 {
+    h2 {
       color: #0057ff;
-      margin-bottom: 15px;
-      font-size: 1.4rem;
-      text-transform: uppercase;
-    }
-
-    section p, li {
-      color: #ccd6f6;
-    }
-
-    ul {
-      list-style-type: none;
-      margin-top: 10px;
+      border-left: 4px solid #0057ff;
+      padding-left: 10px;
+      font-weight: 600;
       margin-bottom: 20px;
     }
 
-    ul li {
-      margin-bottom: 10px;
+    p, li {
+      line-height: 1.6;
+      color: #dcdcdc;
+      font-weight: 300;
     }
 
-    .btn-container {
-      margin-top: 30px;
-      text-align: center;
+    .shape-left, .shape-right {
+      position: fixed;
+      width: 180px;
+      height: 180px;
+      background: rgba(0, 87, 255, 0.15);
+      border-radius: 50%;
+      z-index: 1;
     }
 
-    .btn {
-      display: inline-block;
-      background: #0057ff;
-      color: white;
-      padding: 10px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 8px;
-      transition: all 0.3s ease;
+    .shape-left {
+      top: 10%;
+      left: -80px;
     }
 
-    .btn:hover {
-      background: #1a6bff;
-      transform: scale(1.05);
+    .shape-right {
+      bottom: 10%;
+      right: -80px;
     }
 
     footer {
       text-align: center;
-      padding: 40px 20px 80px;
-      color: #a0a0a0;
+      padding: 40px 0;
+      color: #bfbfbf;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      position: relative;
+    }
+
+    footer img {
+      width: 120px;
+      opacity: 0.9;
+      margin-top: 15px;
     }
 
     footer a {
-      color: #0057ff;
       text-decoration: none;
+      color: #0057ff;
       margin: 0 10px;
-      font-size: 1.4rem;
-      transition: color 0.3s;
     }
 
-    footer a:hover {
-      color: #1a6bff;
-    }
-
-    .signature {
-      position: absolute;
-      bottom: 20px;
-      right: 30px;
-      opacity: 0.8;
-    }
-
-    .signature img {
-      width: 120px;
-      height: auto;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.6rem;
-      }
-      section {
-        padding: 30px 15px;
-      }
-      .signature {
-        position: static;
-        display: block;
-        text-align: center;
-        margin-top: 20px;
-      }
-      .signature img {
-        width: 100px;
-      }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      section { padding: 10px 15px; margin: 40px auto; }
+      .shape-left, .shape-right { display: none; }
     }
   </style>
 </head>
 <body>
 
+  <div class="shape-left"></div>
+  <div class="shape-right"></div>
+
   <header>
-    <!-- GANTI FOTO PROFILMU DI SINI -->
-    <img src="foto-profil.jpg" alt="Foto Profil Aria">
-    <h1>Aria</h1>
-    <p>Tenaga Ahli Ilmu Komunikasi | Profesional Digital</p>
+    <h1>Aria’s Professional Portfolio</h1>
+    <p>Communication Specialist | Creative Strategist | Digital Storyteller</p>
   </header>
 
   <section>
-    <h2>Tentang Saya</h2>
+    <h2>About Me</h2>
     <p>
-      Saya seorang profesional di bidang komunikasi dengan fokus pada strategi media, publikasi digital, dan pengelolaan konten kreatif.  
-      Saya percaya bahwa komunikasi yang efektif adalah fondasi utama dalam membangun kepercayaan dan reputasi publik yang kuat.
+      I am a communication professional with a strong passion for crafting impactful narratives that connect people, ideas, and change. 
+      With a multidisciplinary background spanning media strategy, content development, and public relations, I thrive on turning complex 
+      concepts into stories that resonate. My approach combines analytical thinking with creativity, helping organizations strengthen 
+      their digital presence and build authentic engagement with diverse audiences.
     </p>
   </section>
 
   <section>
     <h2>Work Experience</h2>
     <ul>
-      <li><strong>Tenaga Ahli Ilmu Komunikasi</strong> – Dinas Pertanahan dan Tata Ruang (2023–Sekarang)</li>
-      <li><strong>Konsultan Media</strong> – Proyek Publikasi Digital Instansi Pemerintah (2021–2023)</li>
-      <li><strong>Content Strategist</strong> – Freelance Agency Komunikasi (2019–2021)</li>
+      <li><b>Communication Analyst</b> — Regional Land and Spatial Planning Agency (2023–Present)  
+      Led digital content initiatives, managed stakeholder communications, and developed storytelling materials for public transparency programs.</li>
+      <li><b>Public Relations Assistant</b> — Creative Media Bureau (2021–2023)  
+      Coordinated press releases, digital campaigns, and community outreach strategies for both government and private clients.</li>
+      <li><b>Freelance Content Strategist</b> — Remote (2019–2021)  
+      Designed content blueprints and conducted brand narrative audits for small enterprises and digital creators.</li>
     </ul>
   </section>
 
   <section>
     <h2>Education</h2>
     <ul>
-      <li><strong>Sarjana Ilmu Komunikasi</strong> – Universitas Negeri Jakarta (2015–2019)</li>
-      <li><strong>Sertifikasi Digital Communication</strong> – Coursera, Google (2022)</li>
+      <li><b>Bachelor of Communication Studies</b> — State University of Yogyakarta  
+      Specialized in Media and Strategic Communication, focusing on public information dissemination and digital literacy campaigns.</li>
     </ul>
   </section>
 
   <section>
     <h2>Achievements & Certifications</h2>
     <ul>
-      <li>Best Communication Campaign – Kominfo Award (2023)</li>
-      <li>Certified Public Relations Specialist (CPRS) – BNSP (2022)</li>
-      <li>Content Strategy Masterclass – HubSpot Academy (2021)</li>
+      <li>Certified Digital Marketing Associate — Google</li>
+      <li>Best Content Strategy Award — GovTech Creative Challenge 2024</li>
+      <li>Professional Communication Certificate — Coursera (University of Pennsylvania)</li>
     </ul>
   </section>
 
   <section>
-    <h2>Penutup</h2>
+    <h2>Closing Note</h2>
     <p>
-      Terima kasih telah mengunjungi portofolio saya.  
-      Saya terbuka untuk kolaborasi, proyek komunikasi publik, dan pengembangan strategi media digital.  
-      Silakan hubungi saya melalui media sosial atau email di bawah ini.
+      I believe that effective communication is not only about conveying messages but shaping perspectives and inspiring collaboration. 
+      My ongoing mission is to use storytelling as a catalyst for public trust, innovation, and social progress.  
+      If my profile aligns with your vision, feel free to reach out — I’m always open to new challenges that expand both creativity and purpose.
     </p>
-
-    <div class="btn-container">
-      <a href="https://www.linkedin.com/in/username" target="_blank" class="btn">LinkedIn</a>
-      <a href="https://portfolio-link.com" target="_blank" class="btn">Portofolio</a>
-    </div>
   </section>
 
   <footer>
-    <p>Terhubung dengan saya:</p>
-    <a href="https://www.instagram.com/username" target="_blank">📸</a>
-    <a href="mailto:emailkamu@example.com">✉️</a>
-    <p style="margin-top:10px; font-size:0.9rem;">© 2025 Aria. All rights reserved.</p>
+    <p>Connect with me:</p>
+    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+    <a href="https://www.behance.net" target="_blank">Portfolio</a> |
+    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    <br>
+    <!-- Tambahkan tanda tanganmu di sini -->
+    <img src="signature.png" alt="Signature Placeholder">
+    <p>© 2025 Aria. All rights reserved.</p>
   </footer>
-
-  <!-- GANTI DENGAN FILE TANDA TANGANMU -->
-  <div class="signature">
-    <img src="tanda-tangan.png" alt="Tanda Tangan Aria">
-  </div>
 
 </body>
 </html>
