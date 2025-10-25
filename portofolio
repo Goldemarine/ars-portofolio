@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Aria</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: #0a0f1a;
+      color: #e6f1ff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid #0057ff;
+      object-fit: cover;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #0057ff;
+    }
+
+    header p {
+      color: #a0a0a0;
+      font-size: 1rem;
+      margin-top: 5px;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    section h2 {
+      color: #0057ff;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+
+    section p, li {
+      color: #ccd6f6;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .btn-container {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #0057ff;
+      color: white;
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #1a6bff;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 80px;
+      color: #a0a0a0;
+    }
+
+    footer a {
+      color: #0057ff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.4rem;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #1a6bff;
+    }
+
+    .signature {
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      opacity: 0.8;
+    }
+
+    .signature img {
+      width: 120px;
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+      section {
+        padding: 30px 15px;
+      }
+      .signature {
+        position: static;
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .signature img {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- GANTI FOTO PROFILMU DI SINI -->
+    <img src="foto-profil.jpg" alt="Foto Profil Aria">
+    <h1>Aria</h1>
+    <p>Tenaga Ahli Ilmu Komunikasi | Profesional Digital</p>
+  </header>
+
+  <section>
+    <h2>Tentang Saya</h2>
+    <p>
+      Saya seorang profesional di bidang komunikasi dengan fokus pada strategi media, publikasi digital, dan pengelolaan konten kreatif.  
+      Saya percaya bahwa komunikasi yang efektif adalah fondasi utama dalam membangun kepercayaan dan reputasi publik yang kuat.
+    </p>
+  </section>
+
+  <section>
+    <h2>Work Experience</h2>
+    <ul>
+      <li><strong>Tenaga Ahli Ilmu Komunikasi</strong> – Dinas Pertanahan dan Tata Ruang (2023–Sekarang)</li>
+      <li><strong>Konsultan Media</strong> – Proyek Publikasi Digital Instansi Pemerintah (2021–2023)</li>
+      <li><strong>Content Strategist</strong> – Freelance Agency Komunikasi (2019–2021)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <ul>
+      <li><strong>Sarjana Ilmu Komunikasi</strong> – Universitas Negeri Jakarta (2015–2019)</li>
+      <li><strong>Sertifikasi Digital Communication</strong> – Coursera, Google (2022)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Achievements & Certifications</h2>
+    <ul>
+      <li>Best Communication Campaign – Kominfo Award (2023)</li>
+      <li>Certified Public Relations Specialist (CPRS) – BNSP (2022)</li>
+      <li>Content Strategy Masterclass – HubSpot Academy (2021)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Penutup</h2>
+    <p>
+      Terima kasih telah mengunjungi portofolio saya.  
+      Saya terbuka untuk kolaborasi, proyek komunikasi publik, dan pengembangan strategi media digital.  
+      Silakan hubungi saya melalui media sosial atau email di bawah ini.
+    </p>
+
+    <div class="btn-container">
+      <a href="https://www.linkedin.com/in/username" target="_blank" class="btn">LinkedIn</a>
+      <a href="https://portfolio-link.com" target="_blank" class="btn">Portofolio</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Terhubung dengan saya:</p>
+    <a href="https://www.instagram.com/username" target="_blank">📸</a>
+    <a href="mailto:emailkamu@example.com">✉️</a>
+    <p style="margin-top:10px; font-size:0.9rem;">© 2025 Aria. All rights reserved.</p>
+  </footer>
+
+  <!-- GANTI DENGAN FILE TANDA TANGANMU -->
+  <div class="signature">
+    <img src="tanda-tangan.png" alt="Tanda Tangan Aria">
+  </div>
+
+</body>
+</html>
