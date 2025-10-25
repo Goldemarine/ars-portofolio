@@ -3,29 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aria's Portfolio</title>
+  <title>Aria | Portfolio</title>
   <style>
     :root {
-      --bg-color: #0d1117;
+      --bg-gradient: linear-gradient(135deg, #0d1117, #1b263b);
       --text-color: #e6edf3;
       --accent-color: #58a6ff;
-      --card-bg: #161b22;
+      --card-bg: rgba(22, 27, 34, 0.9);
     }
 
     body.light {
-      --bg-color: #f9f9f9;
+      --bg-gradient: linear-gradient(135deg, #f5f7fa, #dce3ec);
       --text-color: #222;
       --accent-color: #0366d6;
-      --card-bg: #fff;
+      --card-bg: rgba(255,255,255,0.9);
     }
 
     body {
-      background-color: var(--bg-color);
+      background: var(--bg-gradient);
       color: var(--text-color);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      transition: background-color 0.4s ease, color 0.4s ease;
+      transition: background 0.4s ease, color 0.4s ease;
     }
 
     header {
@@ -38,12 +37,13 @@
       position: sticky;
       top: 0;
       z-index: 10;
+      backdrop-filter: blur(8px);
     }
 
     header h1 {
-      font-size: 1.5rem;
       color: var(--accent-color);
       margin: 0;
+      font-size: 1.5rem;
     }
 
     .switch-mode {
@@ -59,7 +59,7 @@
 
     .switch-mode:hover {
       background: var(--accent-color);
-      color: var(--bg-color);
+      color: var(--bg-gradient);
     }
 
     .container {
@@ -69,34 +69,6 @@
       background: var(--card-bg);
       border-radius: 15px;
       box-shadow: 0 0 30px rgba(0,0,0,0.2);
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Decorative shapes */
-    .container::before,
-    .container::after {
-      content: "";
-      position: absolute;
-      width: 120px;
-      height: 120px;
-      background: var(--accent-color);
-      opacity: 0.08;
-      border-radius: 50%;
-    }
-
-    .container::before {
-      top: -40px;
-      left: -40px;
-    }
-
-    .container::after {
-      bottom: -40px;
-      right: -40px;
-    }
-
-    section {
-      margin-bottom: 2.5rem;
     }
 
     h2 {
@@ -123,6 +95,40 @@
       text-align: justify;
     }
 
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: 25px;
+      background-color: var(--accent-color);
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+      transform: scale(1.05);
+    }
+
+    .social-icons {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 1.6rem;
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #fff;
+    }
+
     footer {
       text-align: center;
       font-size: 0.85rem;
@@ -131,6 +137,7 @@
       color: var(--text-color);
     }
   </style>
+  <script src="https://kit.fontawesome.com/8f0c72b3c7.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -142,31 +149,22 @@
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I am an adaptable and creative professional with a strong passion for communication, research, and digital strategy. With an ambivert nature, I can thrive in both collaborative and independent environments. My previous experiences have shaped me to be a detail-oriented individual who values integrity, innovation, and critical thinking in every project I undertake.
+        I am an adaptable and creative communication professional who values clarity, precision, and purpose in every message. With a background in media, public relations, and research, I combine analytical thinking with design sensibility to craft communication strategies that resonate and create impact.
       </p>
     </section>
 
     <section id="experience">
       <h2>Work Experience</h2>
       <ul>
-        <li>
-          <strong>Communication Analyst – Regional Government Project</strong> (2024–Present)<br>
-          Responsible for developing communication strategies, handling media documentation, and ensuring transparent information flow between departments and the public.
-        </li>
-        <li>
-          <strong>Research Assistant – Academic Collaboration</strong> (2022–2023)<br>
-          Supported multiple research studies focused on media literacy, public perception, and strategic communication with academic institutions and NGOs.
-        </li>
+        <li><strong>Communication Analyst – Regional Government Project</strong> (2024–Present)<br>Develops communication frameworks, manages public relations, and ensures transparent dissemination of official information.</li>
+        <li><strong>Research Assistant – Academic Collaboration</strong> (2022–2023)<br>Contributed to multiple studies on media literacy, civic engagement, and digital transformation initiatives.</li>
       </ul>
     </section>
 
     <section id="education">
       <h2>Education</h2>
       <ul>
-        <li>
-          <strong>Bachelor of Communication Science</strong> – Universitas Negeri Yogyakarta (2019–2023)<br>
-          Specialized in public communication, journalism, and digital media management.
-        </li>
+        <li><strong>Bachelor of Communication Science</strong> – Universitas Negeri Yogyakarta (2019–2023)<br>Focused on public communication, journalism, and digital media management.</li>
       </ul>
     </section>
 
@@ -176,20 +174,26 @@
         <li>Certified Digital Communication Strategist – Digitalent Scholarship 2024</li>
         <li>Best Research Presentation – National Communication Conference 2023</li>
         <li>Content Development & Branding Certification – Google Skillshop 2023</li>
-        <li>Top 10 Finalist – Youth Innovation Challenge 2022</li>
       </ul>
     </section>
 
     <section id="closing">
       <h2>Closing Statement</h2>
       <p>
-        My goal is to create meaningful work that bridges ideas, technology, and society. I believe communication is more than conveying messages — it is about connecting perspectives and inspiring transformation. I’m always open to collaborative opportunities that encourage growth, innovation, and positive social impact.
+        Communication is more than expression—it is a bridge between ideas and understanding. I aim to create meaningful, research-driven, and visually coherent works that contribute to organizational growth and public trust. I look forward to collaborating with institutions and professionals who value integrity and innovation.
       </p>
     </section>
 
-    <footer>
-      © 2025 Aria | Built with precision and creativity
-    </footer>
+    <div style="text-align:center;">
+      <a href="index.html" class="btn">Back to Home</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <footer>© 2025 Aria | Built for clarity and elegance</footer>
   </div>
 
   <script>
